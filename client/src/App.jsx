@@ -155,7 +155,7 @@ export default function App() {
     setLoadingCode(true);
 
     try {
-      const res = await fetch(`/api/rooms/${code}`);
+      const res = await fetch(`${API_URL}/rooms/${code}`);
       const data = await res.json();
 
       if (!res.ok) {
