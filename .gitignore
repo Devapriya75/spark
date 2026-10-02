@@ -1,0 +1,25 @@
+SPARK
+├── .gitignore          ← CREATE IT HERE
+├── client
+│   ├── src
+│   ├── package.json
+│   └── ...
+├── server
+│   ├── routes
+│   ├── db.js
+│   ├── index.js
+│   └── package.json
+├── package.json
+└── package-lock.jsonSPARK
+├── .gitignore          ← CREATE IT HERE
+├── client
+│   ├── src
+│   ├── package.json
+│   └── ...
+├── server
+│   ├── routes
+│   ├── db.js
+│   ├── index.js
+│   └── package.json
+├── package.json
+└── package-lock.json
