@@ -7,6 +7,10 @@ import SelfDestructOverlay from './components/SelfDestructOverlay';
 import { getSocket } from './services/socket';
 import { PlusCircle, LogIn, ShieldAlert, ArrowRight } from 'lucide-react';
 import confetti from 'canvas-confetti';
+const API_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:3001/api'
+    : 'https://spark-riw4.onrender.com/api';
 
 export default function App() {
   const [roomCodeInput, setRoomCodeInput] = useState('');
@@ -169,7 +173,7 @@ export default function App() {
 
   const handleCreateRoom = async ({ name, durationHours, password, maxUsers, burnAfterRead, user }) => {
     try {
-      const res = await fetch('/api/rooms', {
+      const res = await fetch(`${API_URL}/rooms`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, durationHours, password, maxUsers, burnAfterRead })
