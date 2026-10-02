@@ -1,6 +1,9 @@
 import { io } from 'socket.io-client';
 
-const SOCKET_URL = window.location.hostname === 'localhost' ? 'http://localhost:3001' : '/';
+const SOCKET_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:3001'
+    : 'https://spark-riw4.onrender.com';
 
 let socket = null;
 
@@ -11,5 +14,6 @@ export function getSocket() {
       transports: ['websocket', 'polling']
     });
   }
+
   return socket;
 }
